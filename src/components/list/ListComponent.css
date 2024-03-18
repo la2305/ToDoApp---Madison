@@ -1,0 +1,10 @@
+.list__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list__container-list {
+  /* min-width: 40%;
+  max-width: 50%; */
+  width: 40%;
+}
