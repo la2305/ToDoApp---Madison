@@ -2,7 +2,7 @@
   <section class="list">
     <h1 class="list__header">To-Do List</h1>
     <div class="list__action">
-      <create-component @createNote="addItem"></create-component>
+      <create-component @update:createNote="addItem"></create-component>
       <select-component @update:filterTodosData="selectData"></select-component>
     </div>
     <div class="list__container">

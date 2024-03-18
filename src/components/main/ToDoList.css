@@ -15,3 +15,13 @@
   align-items: center;
   min-height: 20vh;
 }
+@media (max-width: 1200px) {
+  .list__action {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 600px) {
+  .list__action {
+    flex-wrap: wrap;
+  }
+}

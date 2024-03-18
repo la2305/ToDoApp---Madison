@@ -35,3 +35,8 @@
   padding: 0 16px;
   font-size: 14px;
 }
+@media (max-width: 600px) {
+  .list__action-select {
+    width: 40vw;
+  }
+}

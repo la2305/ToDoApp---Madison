@@ -21,3 +21,4 @@ const filterTodosData = () => {
   emit("update:filterTodosData", currentFilter.value);
 };
 </script>
+<style scoped src="./SelectComponent.css"></style>

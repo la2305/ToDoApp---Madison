@@ -37,3 +37,8 @@
 .list__action-create-button:hover .list__action-create-button-icon {
   color: var(--primary-color);
 }
+@media (max-width: 600px) {
+  .list__action-create-input {
+    width: 50vw;
+  }
+}

@@ -31,3 +31,4 @@ const toggleItem = (itemId) => {
   emit("update:toggleItem", itemId);
 };
 </script>
+<style scoped src="./ItemComponent.css"></style>

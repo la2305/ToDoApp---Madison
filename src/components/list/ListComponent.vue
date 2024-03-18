@@ -28,3 +28,4 @@ const toggleItem = (itemId) => {
   emit("update:toggleItem", itemId);
 };
 </script>
+<style src="./ListComponent.css"></style>
