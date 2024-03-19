@@ -39,7 +39,10 @@ const removeItem = (itemId) => {
   }, 500);
 };
 
-// Send event completed item
+// Send event toggle complete item
+/** @function void
+ * @name saveTodosToLocalStorage
+ * @param none*/
 const toggleItem = (itemId) => {
   emit("update:toggleItem", itemId);
 };

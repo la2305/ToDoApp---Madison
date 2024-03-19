@@ -21,10 +21,13 @@
 </template>
 <script setup>
 import { defineEmits, ref } from "vue";
+
 const text = ref("");
 const isActive = ref(null);
+
 const emit = defineEmits(["update:createNote"]);
 
+// Send event create note
 const createNote = () => {
   if (!text.value) {
     return;

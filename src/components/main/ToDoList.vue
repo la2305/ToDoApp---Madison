@@ -20,13 +20,14 @@ import { computed, onMounted, reactive, ref } from "vue";
 import CreateComponent from "../create/CreateComponent.vue";
 import ListComponent from "../list/ListComponent.vue";
 import SelectComponent from "../select/SelectComponent.vue";
+import { LocalStorageService } from "@/utils/LocalStorageService";
+import { v4 as uuidv4 } from "uuid";
 
 const todos = reactive([]);
 const currentFilter = ref("all");
 
-// Get data from localStorage
 onMounted(() => {
-  const storageTodos = JSON.parse(localStorage.getItem("todos"));
+  const storageTodos = LocalStorageService.getData("todos");
   if (storageTodos) {
     storageTodos.forEach((item) => {
       todos.push(item);
@@ -42,7 +43,7 @@ const addItem = (text) => {
     const newItem = {
       text: text,
       completed: false,
-      id: Math.random(),
+      id: uuidv4(),
     };
     todos.push(newItem);
     saveTodosToLocalStorage();
@@ -92,9 +93,11 @@ const filterTodosData = computed(() => {
   }
 });
 
-// save data to localStorage
+/** @function void
+ * @name saveTodosToLocalStorage
+ * @param none*/
 const saveTodosToLocalStorage = () => {
-  localStorage.setItem("todos", JSON.stringify(todos));
+  LocalStorageService.saveData("todos", todos);
 };
 </script>
 
