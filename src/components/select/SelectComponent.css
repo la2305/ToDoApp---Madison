@@ -5,7 +5,7 @@
   justify-content: center;
   display: flex;
   width: 192px;
-  height: 53px;
+  height: 51px;
   background: var(--white-color);
   overflow: hidden;
 }
@@ -20,7 +20,7 @@
   pointer-events: none;
   font-size: 16px;
   height: 100%;
-  line-height: 53px;
+  line-height: 51px;
   transition: 0.25s all ease;
 }
 .list__action-select-item {

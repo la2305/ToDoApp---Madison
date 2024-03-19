@@ -17,6 +17,10 @@
   border: none;
   background-color: var(--white-color);
   cursor: pointer;
+  transition: transform 0.3s;
+}
+.active {
+  transform: scale(0.9);
 }
 .list__action-create-button-hover {
   background-color: var(--primary-color);
