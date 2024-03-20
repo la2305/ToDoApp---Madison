@@ -29,9 +29,8 @@ const emit = defineEmits(["update:createNote"]);
 
 // Send event create note
 const createNote = () => {
-  if (!text.value) {
-    return;
-  } else {
+  text.value = text.value.trim();
+  if (text.value.length > 0) {
     emit("update:createNote", text.value);
     text.value = "";
   }

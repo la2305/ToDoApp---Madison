@@ -14,9 +14,12 @@
 </template>
 <script setup>
 import { defineEmits, ref } from "vue";
+
 const currentFilter = ref("all");
+
 const emit = defineEmits(["update:filterTodosData"]);
 
+// Send event filter data
 const filterTodosData = () => {
   emit("update:filterTodosData", currentFilter.value);
 };

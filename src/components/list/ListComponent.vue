@@ -21,9 +21,13 @@ defineProps({
     required: true,
   },
 });
+
+// Send event remove item
 const removeItem = (itemId) => {
   emit("update:removeItem", itemId);
 };
+
+// Send event toggle complete item
 const toggleItem = (itemId) => {
   emit("update:toggleItem", itemId);
 };

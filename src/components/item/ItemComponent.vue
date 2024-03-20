@@ -21,9 +21,9 @@
 </template>
 <script setup>
 import { defineEmits, defineProps, ref } from "vue";
+
 const isRemoveActive = ref([]);
 const emit = defineEmits(["update:removeItem"], ["update:toggleItem"]);
-
 defineProps({
   todos: {
     type: Array,
